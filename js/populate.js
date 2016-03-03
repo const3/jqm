@@ -3,7 +3,7 @@ $(document).ready(function(e){
   $.getJSON("../prueba.php",function(data){
     $.each(data,function(index,item) 
     {
-      items+="<li>"+item.nombre+"</li>";
+      items+="<li>"+item[0]+"</li>";
     });
     $("#listaLibros").html(items); 
   });
