@@ -8,7 +8,7 @@ include('connect.php');
    }
 
    $sql =<<<EOF
-      SELECT * from COMPANY;
+      SELECT * from libros;
 EOF;
 
    $ret = pg_query($db, $sql);
@@ -16,12 +16,11 @@ EOF;
       echo pg_last_error($db);
       exit;
    } 
+ 
+   $data = array();
    while($row = pg_fetch_row($ret)){
-      echo "ID = ". $row[0] . "\n";
-      echo "NAME = ". $row[1] ."\n";
-      echo "ADDRESS = ". $row[2] ."\n";
-      echo "SALARY =  ".$row[4] ."\n\n";
-   }
-   echo "Operation done successfully\n";
+   $data[] = $row; 
+   };
+   echo json_encode($data);
    pg_close($db);
 ?>
