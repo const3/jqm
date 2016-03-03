@@ -21,6 +21,7 @@ EOF;
    while($row = pg_fetch_row($ret)){
    $data[] = $row; 
    };
+   header('Content-Type: application/json');
    echo json_encode($data);
    pg_close($db);
 ?>
