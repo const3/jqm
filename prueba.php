@@ -8,7 +8,10 @@ include('connect.php');
    }
 
    $sql =<<<EOF
-      SELECT * from libros;
+     With p as (
+      SELECT * FROM libros
+      )
+      select json_agg(p) as json from p;
 EOF;
 
    $ret = pg_query($db, $sql);
