@@ -22,6 +22,7 @@ EOF;
    $data[] = $row; 
    };
    header('Content-Type: application/json');
-   echo json_decode($data);
+   $ar = json_decode($data);
+   echo $ar;
    pg_close($db);
 ?>
