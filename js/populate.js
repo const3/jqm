@@ -5,6 +5,6 @@ $(document).ready(function(e){
     {
       items+="<li><a href=\"#\">"+item[0]+"</a></li>";
     });
-    $("#good").html(items); 
+    $("#good").append(items); 
   });
 });
