@@ -21,25 +21,34 @@
   </div>
 
   <div data-role="main" class="ui-content">
-    <div data-role="collapsible">
-      <h1>Click me - I'm collapsible!</h1>
-      <p>I'm the expanded content.</p>
+    <a href="#myPopupDialog" data-rel="popup" data-position-to="window" data-transition="fade" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Open Dialog Popup</a>
+
+    <div data-role="popup" id="myPopupDialog">
+      <div data-role="header">
+        <h1>Header Text</h1>
+      </div>
+
+      <div data-role="main" class="ui-content">
+         <form method="post" action="demoform.asp">
+            <div class="ui-field-contain">
+              <label for="bname">Nombre del libro:</label>
+              <input type="text" name="bname" id="bname">
+              <label for="aname">Nombre del autor:</label>
+              <input type="text" name="aname" id="aname">
+              <label for="anio">Año:</label>
+              <input type="text" name="anio" id="anio">
+            </div>
+            <input type="submit" data-inline="true" value="Submit">
+          </form>
+      </div>
+
+      <div data-role="footer">
+        <h1>Footer Text</h1>
+      </div>
     </div>
+
     <ul data-role="listview" data-autodividers="true" data-inset="true" id="good">
-    <li><a href="#">Adele</a></li>
-    <li><a href="#">Agnes</a></li>
-    <li><a href="#">Albert</a></li>
-    <li><a href="#">Billy</a></li>
-    <li><a href="#">Bob</a></li>
-    <li><a href="#">Calvin</a></li>
-    <li><a href="#">Cameron</a></li>
-    <li><a href="#">Chloe</a></li>
-    <li><a href="#">Christina</a></li>
-    <li><a href="#">Diana</a></li>
-    <li><a href="#">Gabriel</a></li>
-    <li><a href="#">Glen</a></li>
-    <li><a href="#">Ralph</a></li>
-    <li><a href="#">Valarie</a></li>
+   
   </ul>
   </div>
 
