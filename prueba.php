@@ -18,10 +18,10 @@ EOF;
    } 
  
    $data = array();
-   while($row = pg_fetch_row($ret)){
+   while($row = pg_fetch_assoc($ret)){
    $data[] = $row; 
    };
    header('Content-Type: application/json');
-   echo json_encode($data);
+   echo json_decode($data);
    pg_close($db);
 ?>
