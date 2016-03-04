@@ -5,6 +5,6 @@ $(document).ready(function(e){
     {
       items+="<li><a href=\"#\">"+item[0]+"</a></li>";
     });
-    $("#good").append(items); 
+    $("#good").append(items).listview('refresh');; 
   });
 });
