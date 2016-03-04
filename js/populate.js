@@ -5,6 +5,6 @@ $(document).ready(function(e){
     {
       items+="<li><a href=\"#\">"+item[0]+"</a></li>";
     });
-    $("#listaLibros").html(items); 
+    $("#good").html(items); 
   });
 });
