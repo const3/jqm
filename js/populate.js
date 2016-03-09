@@ -26,6 +26,16 @@ $(document).ready(function(e){
       ajaxRequest.done(function (response, textStatus, jqXHR){
         $("#good").html('');
         getLibros();
+        $('#formLibro').trigger("reset");
+        $('#myPopupDialog').hide();
+          var interval = setInterval(function(){
+                $('#dialog').popup('open', {history: false});
+                var intervalClose = setInterval(function(){    
+                    $('#dialog').popup('close');
+                    clearInterval(intervalClose);
+                },1000);
+                clearInterval(interval);
+                  },1);
       });
       ajaxRequest.fail(function (){
         $("#result").html('There is error while submit');
