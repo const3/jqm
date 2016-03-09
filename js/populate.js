@@ -27,7 +27,7 @@ $(document).ready(function(e){
         $("#good").html('');
         getLibros();
         $('#formLibro').trigger("reset");
-        $('#myPopupDialog').hide();
+        $('#myPopupDialog').popup('close');  
           var interval = setInterval(function(){
                 $('#dialog').popup('open', {history: false});
                 var intervalClose = setInterval(function(){    

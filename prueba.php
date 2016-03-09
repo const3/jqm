@@ -8,7 +8,7 @@ include('connect.php');
    }
 
    $sql =<<<EOF
-      SELECT * from libros;
+      SELECT * from libros order by nombre asc;
 EOF;
 
    $ret = pg_query($db, $sql);
