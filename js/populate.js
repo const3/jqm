@@ -28,18 +28,19 @@ $(document).ready(function(e){
         getLibros();
         $('#formLibro').trigger("reset");
         $('#myPopupDialog').popup('close');  
-        setTimeout(function(){
+       
+
+      });
+      ajaxRequest.fail(function (){
+        $("#result").html('There is error while submit');
+  	  });
+       setTimeout(function(){
               $("#dialog").popup();
               $("#dialog").popup("open");
             }, 100);
             setTimeout(function(){
               $("#dialog").popup("close");
             }, 5000);
-
-      });
-      ajaxRequest.fail(function (){
-        $("#result").html('There is error while submit');
-  	  });
     });
 
      $( '#pageone' ).bind( 'pageinit',function(event){
