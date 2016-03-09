@@ -13,7 +13,7 @@ $(document).ready(function(e){
   });
 }
 
-  $( "#good" ).submit(function( event ) {
+  $( "#formLibro" ).submit(function( event ) {
   	 //var ajaxRequest;
     event.preventDefault();
     //$("#result").html('');
