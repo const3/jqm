@@ -1,7 +1,7 @@
-$(document).ready(
+$(document).ready(function(e){
 
   getLibros();
-  
+
   function getLibros(){
   var items="";
   $.getJSON("../prueba.php",function(data){
@@ -13,7 +13,7 @@ $(document).ready(
   });
 }
 
-  $( "#formLibro" ).submit(function( event ) {
+  $( "#good" ).submit(function( event ) {
   	 //var ajaxRequest;
     event.preventDefault();
     //$("#result").html('');
@@ -30,4 +30,4 @@ $(document).ready(
  //     ajaxRequest.fail(function (){
  //       $("#result").html('There is error while submit');
 	 });
-);
+});
