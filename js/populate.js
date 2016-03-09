@@ -29,9 +29,9 @@ $(document).ready(function(e){
         $('#formLibro').trigger("reset");
         $('#myPopupDialog').popup('close');  
         $('#dialog').popup('open', {history: false});
-        setTimeout(function(){
-          $("#dialog").popup('close')
-        }, 3000);
+        // setTimeout(function(){
+        //   $("#dialog").popup('close')
+        // }, 3000);
       });
       ajaxRequest.fail(function (){
         $("#result").html('There is error while submit');
