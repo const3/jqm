@@ -1,4 +1,8 @@
-$(document).ready(function(e){
+$(document).ready(
+
+  getLibros();
+  
+  function getLibros(){
   var items="";
   $.getJSON("../prueba.php",function(data){
     $.each(data,function(index,item) 
@@ -7,6 +11,7 @@ $(document).ready(function(e){
     });
     $("#good").append(items).listview('refresh');; 
   });
+}
 
   $( "#formLibro" ).submit(function( event ) {
   	 //var ajaxRequest;
@@ -24,5 +29,5 @@ $(document).ready(function(e){
  //     });
  //     ajaxRequest.fail(function (){
  //       $("#result").html('There is error while submit');
-	// });
-});
+	 });
+);
