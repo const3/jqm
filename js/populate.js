@@ -28,29 +28,25 @@ $(document).ready(function(e){
         getLibros();
         $('#formLibro').trigger("reset");
         $('#myPopupDialog').popup('close');  
-       
+         $("#dialog").popup("close");
 
       });
       ajaxRequest.fail(function (){
         $("#result").html('There is error while submit');
   	  });
-       setTimeout(function(){
-              $("#dialog").popup();
-              $("#dialog").popup("open");
-            }, 100);
-            setTimeout(function(){
-              $("#dialog").popup("close");
-            }, 5000);
     });
 
-     $( '#pageone' ).bind( 'pageinit',function(event){
-            setTimeout(function(){
-              $("#dialog").popup();
-              $("#dialog").popup("open");
-            }, 100);
-            setTimeout(function(){
+   $("#pageone").on("pageinit", function () {
+
+    $("#dialog").on({
+        popupafteropen: function () {
+           setTimeout(function(){
               $("#dialog").popup("close");
-            }, 5000);
-          });
+            }, 1000);
+        }
+
+    });
+
+});
 
 });
