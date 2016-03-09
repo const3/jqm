@@ -28,7 +28,14 @@ $(document).ready(function(e){
         getLibros();
         $('#formLibro').trigger("reset");
         $('#myPopupDialog').popup('close');  
-          var interval = setInterval(function(){
+        showMessage('hola');
+      });
+      ajaxRequest.fail(function (){
+        $("#result").html('There is error while submit');
+  	  });
+    });
+  function showMessage(data){
+       var interval = setInterval(function(){
                 $('#dialog').popup('open', {history: false});
                 var intervalClose = setInterval(function(){    
                     $('#dialog').popup('close');
@@ -36,9 +43,5 @@ $(document).ready(function(e){
                 },1000);
                 clearInterval(interval);
                   },1);
-      });
-      ajaxRequest.fail(function (){
-        $("#result").html('There is error while submit');
-  	  });
-    });
+  }
 });
