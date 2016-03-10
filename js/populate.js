@@ -28,7 +28,7 @@ $(document).ready(function(e){
         getLibros();
         $('#formLibro').trigger("reset");
         $('#myPopupDialog').popup('close');  
-         $("#dialog").popup("close");
+         $("#dialog").popup("open");
 
       });
       ajaxRequest.fail(function (){
